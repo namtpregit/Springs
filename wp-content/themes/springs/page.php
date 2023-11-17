@@ -12,7 +12,7 @@
  * @package Springs
  */
 
-get_header('home');
+get_header();
 ?>
 
 	<main id="primary" class="site-main">
@@ -33,4 +33,4 @@ get_header('home');
 	</main><!-- #main -->
 
 <?php
-get_footer('home');
+get_footer();

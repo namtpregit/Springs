@@ -20,13 +20,13 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database fofor WordPress */
-define( 'DB_NAME', 'test3' );
+define( 'DB_NAME', 'springs-v5' );
 
 /** Database username */
 define( 'DB_USER', 'root' );
 
 /** Database password */
-define( 'DB_PASSWORD', '1' );
+define( 'DB_PASSWORD', '' );
 
 /** Database hostname */
 define( 'DB_HOST', '127.0.0.1' );

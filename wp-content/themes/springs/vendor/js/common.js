@@ -14,7 +14,7 @@ $(function() {
 	}), $('a[href*="#"]').click(function() {
 		var e = $("#" === this.hash ? "html" : this.hash);
 		if (e.length) return e = e.offset().top, $("html, body").animate({
-			scrollTop: e
+			scrollTop: e + -40
 		}, 400, "swing"), !1
 	}), new Swiper(".swiper1", {
 		scrollbar: {

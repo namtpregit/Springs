@@ -1,94 +1,250 @@
 :root {
-    --c-red: #C40000;
-    --c-main: #004445;
-    --c-green-2: #2D4961;
-    --c-green-3: #122F4B;
-    --c-green-4: #44ABA5;
-    --c-text: #000;
-    --c-gray: #FCF6FF;
-    --c-gray-2: #F6F6F6;
-    --c-gray-3: #D9D9D9;
-    --c-white: #fff;
+  --c-red: #c40000;
+  --c-main: #004445;
+  --c-green-2: #2d4961;
+  --c-green-3: #122f4b;
+  --c-green-4: #44aba5;
+  --c-text: #000;
+  --c-gray: #fcf6ff;
+  --c-gray-2: #f6f6f6;
+  --c-gray-3: #d9d9d9;
+  --c-gray-4: #aaa;
+  --c-gray-5: #848484;
+  --c-white: #fff;
 }
 
 html {
-    box-sizing: border-box
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-@import url('https://fonts.cdnfonts.com/css/times-new-roman');
+@import url("https://fonts.cdnfonts.com/css/times-new-roman");
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-html, body {
-    font-size: 16px;
-    color: var(--c-main);
-    background-color: var(--c-white);
-    font-family: 'Noto Sans', sans-serif;
+html,
+body {
+  font-size: 16px;
+  color: var(--c-main);
+  background-color: var(--c-white);
+  font-family: "Noto Sans", sans-serif;
 }
 
 .wrapper {
-    max-width: 1200px;
-    background-color: var(--c-white);
-    margin: 0 auto;
+  max-width: 1200px;
+  background-color: var(--c-white);
+  margin: 0 auto;
 }
 
 .container-c {
-    max-width: 1000px;
-    margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;
 
-    @media (max-width: 575.98px) {
-        padding: 0 22px;
-    }
+  @media (max-width: 767.98px) {
+    padding: 0 22px;
+  }
+}
+
+.container-c2 {
+  max-width: 1148px;
+  margin: 0 auto;
+
+  @media (max-width: 767.98px) {
+    padding: 0 22px;
+  }
 }
 
 .title-base {
-    font-weight: 700;
-    font-size: 28px;
+  font-weight: 700;
+  font-size: 28px;
 }
 
 p {
-    margin-bottom: 0; }
-  
-  .white-space {
-    white-space: pre-line;
-  }
-  .ele-container-c {
-    padding: 0;
-    .ele-title {
-      .elementor-heading-title {
-        height: 60px; 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-      }
+  margin-bottom: 0;
+}
+
+.white-space {
+  white-space: pre-line;
+}
+.ele-container-c {
+  padding: 0;
+  .ele-title {
+    .elementor-heading-title {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      font-size: 26px !important;
     }
   }
+}
 
-@import './header.scss';
-@import './banner.scss';
-@import './footer.scss';
-@import './contact.scss';
-@import './service.scss';
-@import './impress.scss';
-@import './company.scss';
+.elementor  {
+  padding-top: 60px;
+}
+
+.ele-1 {
+  &.first {
+    .e-child {
+      padding-left: var(--container-default-padding-block-start,10px);
+      padding-right: var(--container-default-padding-block-end,10px);
+    }
+  }
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-white-space {
+  white-space: unset;
+}
+
+.white-space-p {
+  // white-space: unset;
+  p {
+    white-space: pre-line;
+  }
+}
+
+.ele-2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+
+  .child {
+    width: 50%;
+
+    .title {
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    .desc {
+      white-space: pre-line;
+    }
+  }
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--c-text);
+  opacity: 0.7;
+  z-index: 999999;
+
+  display: none;
+  &.open {
+    display: block;
+  }
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    span {
+      color: var(--c-white);
+    }
+    .img {
+      width: 20px;
+      text-align: center;
+    }
+  }
+}
+
+label[for="ftype"] {
+  margin-bottom: 13px !important;
+}
+
+.wpcf7-form-control-wrap {
+  .wpcf7-radio {
+      .wpcf7-list-item {
+          display: inline-flex;
+          flex-direction: row-reverse;
+          margin: 0 13px 0 0;
+          align-items: center;
+
+
+          .wpcf7-list-item-label {
+              padding-left: 9px;
+              font-size: 15px;
+              line-height: 31px;
+              color: var(--c-text);
+          }
+
+          &>input[type="radio"] {
+              width: 18px;
+              position: relative;
+
+              &:checked {
+                  &::after {
+                      display: block;
+                  }
+              }
+              &::before {
+                  content: "";
+                  position: absolute;
+                  top: 50%;
+                  left: 0;
+                  transform: translateY(-50%);
+                  width: 18.5px;
+                  height: 18.5px;
+                  background-color: var(--c-white);
+                  border-radius: 100%;
+                  border: 1px solid var(--c-gray-3);
+              }
+
+              &::after {
+                  content: "";
+                  position: absolute;
+                  top: 50%;
+                  left: 5px;
+                  transform: translateY(-50%);
+                  background-color: var(--c-gray-5);
+                  width: 8px;
+                  height: 8px;
+                  border-radius: 100%;
+                  display: none;
+              }
+          }
+
+          @media (max-width: 767.98px) {
+              justify-content: flex-end;
+              width: 100%;
+          }
+      }
+  }
+}
+
+@import "./header.scss";
+@import "./banner.scss";
+@import "./footer.scss";
+@import "./contact.scss";
+@import "./service.scss";
+@import "./impress.scss";
+@import "./company.scss";
