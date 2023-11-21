@@ -18,6 +18,9 @@
         margin-bottom: 0;
         white-space: pre-line;
         margin-bottom: 25px;
+        br {
+          display: none;
+        }
       }
       .ul {
         background-color: var(--c-white);
@@ -103,6 +106,9 @@
         }
         .desc {
           margin: 0 auto 22px;
+          br {
+            display: block;
+          }
         }
         .ul {
           padding: 17px 13px;

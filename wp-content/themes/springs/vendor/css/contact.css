@@ -15,6 +15,8 @@
         margin-bottom: 0;
         white-space: pre-line;
         margin-bottom: 25px; }
+        #contact .box .box-title .desc br {
+          display: none; }
       #contact .box .box-title .ul {
         background-color: var(--c-white);
         border-radius: 4px;
@@ -77,6 +79,8 @@
             margin-bottom: 29px; }
           #contact .box .box-title .desc {
             margin: 0 auto 22px; }
+            #contact .box .box-title .desc br {
+              display: block; }
           #contact .box .box-title .ul {
             padding: 17px 13px;
             padding-left: 26px;

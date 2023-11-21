@@ -98,8 +98,15 @@
       }
 
       .right {
-        .img {
+        .img-box {
           width: 427px;
+          height: 413px;
+          overflow: hidden;
+          margin-bottom: 40px;
+
+          .img {
+            width: 107%;
+          }
         }
         .text {
           font-weight: 400;
@@ -185,9 +192,13 @@
         .right {
           margin-left: -10px;
           padding-top: 37px;
-          .img {
+          .img-box {
             width: 100%;
+            height: auto;
             margin-bottom: 24px;
+            .img {
+              width: 100%;
+            }
           }
           .text {
             padding-right: 0;

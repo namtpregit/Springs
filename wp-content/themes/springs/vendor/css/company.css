@@ -29,8 +29,7 @@
         display: none; }
     #company .table-div .list .item .desc-ul, #confirm .table-div .list .item .desc-ul, #thankyou .table-div .list .item .desc-ul {
       width: 100%;
-      padding: 17px 0;
-      border-bottom: 1px solid var(--c-main); }
+      padding: 17px 0; }
   #company ul.ul-custom, #confirm ul.ul-custom, #thankyou ul.ul-custom {
     padding-left: 22px;
     margin-bottom: 0; }
@@ -65,11 +64,13 @@
           text-align: center; }
           #company .table-div .list .item .desc br, #confirm .table-div .list .item .desc br, #thankyou .table-div .list .item .desc br {
             display: block; }
+        #company .table-div .list .item .desc-ul, #confirm .table-div .list .item .desc-ul, #thankyou .table-div .list .item .desc-ul {
+          border-bottom: 1px solid var(--c-main); }
         #company .table-div .list .item:last-child .desc, #confirm .table-div .list .item:last-child .desc, #thankyou .table-div .list .item:last-child .desc {
           text-align: left; } }
 
 #confirm {
-  padding: 0 0 84px;
+  padding: 0 0 57px;
   text-align: center; }
   @media (max-width: 767.98px) {
     #confirm {

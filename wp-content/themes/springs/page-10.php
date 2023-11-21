@@ -24,7 +24,7 @@ get_header();
                     <img class="card-img-top" src="<?php bloginfo('template_directory'); ?>/vendor/imgs/img-1.jpg" alt="Card image" data-aos="fade-in">
                     <div class="card-body">
                         <h4 class="card-title title-base">豊かな未来への源泉。</h4>
-                        <p class="card-text">未来への飛躍を支える投de
+                        <p class="card-text">未来への飛躍を支える投資や
                             ビジネスのマッチングなど、
                             あなたの豊かな未来への<br>お手伝いいたします。</p>
                     </div>
@@ -40,30 +40,32 @@ get_header();
                 <div class="l">
                     <span class="title">NEWS</span>
                 </div>
-                <div class="marquee">
-                    <div class="r">
-                        <span class="r-item">
+
+                <div class="enable-animation">
+                    <div class="marquee">
+                        <div class="marquee__content">
                             <?php
                             query_posts(array(
                                 'post_type' => 'news'
                             )); ?>
                             <?php
                             while (have_posts()) : the_post(); ?>
-                                <span class="date"><?php echo get_the_date('Y.m.d'); ?></span> <span class="text"><?php the_title(); ?></span>
+                                <span><span class="date"><?php echo get_the_date('Y.m.d'); ?></span> <span class="text"><?php the_title(); ?></span></span>
                             <?php endwhile;
                             ?>
-                        </span>
-                        <span class="r-item">
+                        </div>
+
+                        <div class="marquee__content">
                             <?php
                             query_posts(array(
                                 'post_type' => 'news'
                             )); ?>
                             <?php
                             while (have_posts()) : the_post(); ?>
-                                <span class="date"><?php echo get_the_date('Y.m.d'); ?></span> <span class="text"><?php the_title(); ?></span>
+                                <span><span class="date"><?php echo get_the_date('Y.m.d'); ?></span> <span class="text"><?php the_title(); ?></span></span>
                             <?php endwhile;
                             ?>
-                        </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -141,8 +143,10 @@ get_header();
                     </li>
                 </ul>
             </div>
-            <div class="right js-parallax">
-                <img src="<?php bloginfo('template_directory'); ?>/vendor/imgs/img-3.png" alt="" class="img">
+            <div class="right">
+                <div class="img-box js-parallax">
+                    <img src="<?php bloginfo('template_directory'); ?>/vendor/imgs/img-3.png" alt="" class="img">
+                </div>
                 <div class="text">趣味
                     不動産巡り、ゴルフ、自然巡り、ワイン、グル
                     メ会、お料理教室の主宰、ご縁繋ぎ
@@ -327,10 +331,8 @@ get_header();
         <div class="box">
             <div class="box-title">
                 <h4 class="title title-base">お問合わせ</h4>
-                <div class="desc">弊社のホームページをご覧いただき、
-                    誠にありがとうございます。
-                    ご質問・ご相談・お見積りなど、
-                    お気軽にご連絡ください。
+                <div class="desc">弊社のホームページをご覧いただき、<br>誠にありがとうございます。
+                    ご質問・ご相談・お見積りなど、<br>お気軽にご連絡ください。
                 </div>
                 <ul class="ul">
                     <li>必要事項にご記入いただき、「送信する」を押してください。</li>

@@ -41,7 +41,7 @@
         .desc-ul {
           width: 100%;
           padding: 17px 0;
-          border-bottom: 1px solid var(--c-main);
+          // border-bottom: 1px solid var(--c-main);
         }
       }
     }
@@ -94,6 +94,10 @@
             }
           }
 
+          .desc-ul {
+            border-bottom: 1px solid var(--c-main);
+          }
+
           &:last-child {
             .desc {
               text-align: left;
@@ -107,7 +111,7 @@
 
 #confirm {
   @extend #company;
-  padding: 0 0 84px;
+  padding: 0 0 57px;
   text-align: center;
   @media (max-width: 767.98px) {
     padding: 60px 0 57px;

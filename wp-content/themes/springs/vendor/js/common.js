@@ -133,9 +133,9 @@ $(function() {
 		$(this).hasClass("is-open") ? $(this).removeClass("is-open") : $(this).addClass("is-open")
 	}), document.querySelectorAll(".js-parallax").forEach(function(e) {
 		gsap.fromTo(e.querySelector("img"), {
-			y: 0
+			y: 10
 		}, {
-			y: -10,
+			y: -20,
 			ease: "none",
 			scrollTrigger: {
 				trigger: e,

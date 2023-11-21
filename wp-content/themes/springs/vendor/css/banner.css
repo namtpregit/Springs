@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #banner {
   padding: 0 0 50px; }
   #banner .box .top {
@@ -72,19 +73,19 @@
       font-size: 15px; }
     #banner .box .bottom .l {
       width: 90px; }
-    #banner .box .bottom .marquee {
-      height: 25px;
+    #banner .box .bottom .enable-animation {
       width: calc(100% - 90px);
+      height: 25px;
       overflow: hidden;
       position: relative; }
-      #banner .box .bottom .marquee .r {
+      #banner .box .bottom .enable-animation .marquee .r {
         display: block;
         width: 200%;
         height: 30px;
         position: absolute;
         overflow: hidden;
         animation: marquee 12s linear infinite; }
-        #banner .box .bottom .marquee .r .r-item {
+        #banner .box .bottom .enable-animation .marquee .r .r-item {
           width: 50%;
           float: left; }
   @media (max-width: 767.98px) {
@@ -138,12 +139,67 @@
           border-top: 1px solid var(--c-main);
           border-bottom: 1px solid var(--c-main);
           padding: 22px 6px;
-          margin: 0 21px; } }
+          margin: 0 21px; }
+          #banner .box .bottom .marquee .r .r-item {
+            float: unset; } }
 
 @keyframes marquee {
   0% {
     left: 0; }
   100% {
     left: -100%; } }
+.marquee {
+  --gap: 1rem;
+  display: flex;
+  user-select: none;
+  gap: var(--gap); }
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  min-width: 100%; }
+
+@keyframes scroll {
+  from {
+    transform: translateX(0); }
+  to {
+    transform: translateX(calc(-100% - var(--gap))); } }
+/* Pause animation when reduced-motion is set */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__content {
+    animation-play-state: paused !important; } }
+/* Enable animation */
+.enable-animation .marquee__content {
+  animation: scroll 10s linear infinite; }
+
+/* Reverse animation */
+.marquee--reverse .marquee__content {
+  animation-direction: reverse; }
+
+/* Pause on hover */
+.marquee--hover-pause:hover .marquee__content {
+  animation-play-state: paused; }
+
+/* Attempt to size parent based on content. Keep in mind that the parent width is equal to both content containers that stretch to fill the parent. */
+.marquee--fit-content {
+  max-width: fit-content; }
+
+/* A fit-content sizing fix: Absolute position the duplicate container. This will set the size of the parent wrapper to a single child container. Shout out to Olavi's article that had this solution 👏 @link: https://olavihaapala.fi/2021/02/23/modern-marquee.html  */
+.marquee--pos-absolute .marquee__content:last-child {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/* Enable position absolute animation on the duplicate content (last-child) */
+.enable-animation .marquee--pos-absolute .marquee__content:last-child {
+  animation-name: scroll-abs; }
+
+@keyframes scroll-abs {
+  from {
+    transform: translateX(calc(100% + var(--gap))); }
+  to {
+    transform: translateX(0); } }
 
 /*# sourceMappingURL=banner.css.map */

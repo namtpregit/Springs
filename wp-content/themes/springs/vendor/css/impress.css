@@ -69,8 +69,13 @@
           line-height: 32px;
           font-weight: 400;
           white-space: pre-line; }
-    #impress .list .group .right .img {
-      width: 427px; }
+    #impress .list .group .right .img-box {
+      width: 427px;
+      height: 413px;
+      overflow: hidden;
+      margin-bottom: 40px; }
+      #impress .list .group .right .img-box .img {
+        width: 107%; }
     #impress .list .group .right .text {
       font-weight: 400;
       line-height: 32px;
@@ -127,9 +132,12 @@
         #impress .list .group .right {
           margin-left: -10px;
           padding-top: 37px; }
-          #impress .list .group .right .img {
+          #impress .list .group .right .img-box {
             width: 100%;
+            height: auto;
             margin-bottom: 24px; }
+            #impress .list .group .right .img-box .img {
+              width: 100%; }
           #impress .list .group .right .text {
             padding-right: 0; } }
 
